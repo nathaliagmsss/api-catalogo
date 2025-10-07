@@ -394,131 +394,75 @@ az webapp log deployment show \
 
 ---
 
-## 🧪 7. Testar com cURL
+## 🧪 7. Testar com swagger
 
-### Criar uma Categoria
+### 7.1. Acessar o Swagger UI
 
-```bash
-curl -X POST https://SEU-WEBAPP.azurewebsites.net/api/categorias \
-  -H "Content-Type: application/json" \
-  -d '{
-    "nome": "Eletrônicos",
-    "descricao": "Produtos eletrônicos e tecnologia",
-    "ativo": true
-  }'
-```
+1. Abra seu navegador
+2. Acesse: `https://SEU-WEBAPP.azurewebsites.net/swagger`
+3. Você verá a interface do Swagger com todos os endpoints
+4. 
+---
 
-### Criar um Produto
+### 7.2. Testar GET /api/produtos
 
-```bash
-curl -X POST https://SEU-WEBAPP.azurewebsites.net/api/produtos \
-  -H "Content-Type: application/json" \
-  -d '{
-    "nome": "Notebook Dell",
-    "descricao": "Notebook i7 16GB RAM",
-    "preco": 3500.00,
-    "estoque": 10,
-    "categoriaId": 1,
-    "ativo": true
-  }'
-```
+![Teste GET Produtos](./prints/08-GET-produtos.png)
 
-### Listar Categorias
-
-```bash
-curl https://SEU-WEBAPP.azurewebsites.net/api/categorias
-```
+**Passos:**
+1. Clique em `GET /api/produtos`
+2. Clique em "Try it out"
+3. Clique em "Execute"
+4. Veja a resposta com a lista de produtos
 
 ---
 
-## 🛠️ 8. Troubleshooting
+### 7.3. Testar POST /api/produtos
 
-### Problema: Erro 500 ao acessar a API
+![Teste POST Produtos](./prints/09-POST-produtos.png)
 
-**Solução:**
-```bash
-# Ver logs detalhados
-az webapp log tail \
-  --name SEU-WEBAPP-NAME \
-  --resource-group rg-catalog-api
-
-# Verificar se a connection string está configurada
-az webapp config connection-string list \
-  --name SEU-WEBAPP-NAME \
-  --resource-group rg-catalog-api
+**Passos:**
+1. Clique em `POST /api/produtos`
+2. Clique em "Try it out"
+3. Edite o JSON de exemplo:
+```json
+{
+  "nome": "Mouse Gamer",
+  "descricao": "Mouse RGB 16000 DPI",
+  "preco": 250.00,
+  "estoque": 25,
+  "categoriaId": 1,
+  "ativo": true
+}
 ```
+---
 
-### Problema: Não consegue conectar ao banco
+### 7.4. Testar PUT /api/produtos/{id}
 
-**Solução:**
-```bash
-# Verificar regras de firewall
-az sql server firewall-rule list \
-  --resource-group rg-catalog-api \
-  --server SEU-SQL-SERVER-NAME
+![Teste PUT Produtos](./prints/09-PUT-produto-{id}.png)
 
-# Adicionar seu IP
-az sql server firewall-rule create \
-  --resource-group rg-catalog-api \
-  --server SEU-SQL-SERVER-NAME \
-  --name AllowMyIP \
-  --start-ip-address SEU-IP \
-  --end-ip-address SEU-IP
-```
-
-### Problema: Deploy falhou
-
-**Solução:**
-```bash
-# Limpar cache e tentar novamente
-cd ..
-rm -rf bin obj publish publish.zip
-./scripts_cli/08-deploy-application.sh
-```
+**Passos:**
+1. Clique em `PUT /api/produtos/{id}`
+2. Clique em "Try it out"
+3. Digite o ID do produto que deseja atualizar
+4. Edite o JSON com os novos dados
+5. Clique em "Execute"
+6. Verifique o código de resposta `204 No Content`
 
 ---
 
-## 🗑️ 9. Limpar Recursos (Deletar tudo)
+### 7.5. Testar DELETE /api/produtos/{id}
 
-⚠️ **ATENÇÃO:** Isso deletará TODOS os recursos e dados!
+![Teste DELETE Produtos](./prints/10-DELETE-produto-{id}.png)
 
-```bash
-az group delete \
-  --name rg-catalog-api \
-  --yes \
-  --no-wait
-```
-
----
-
-## 💰 10. Custos Estimados
-
-Com a configuração Basic:
-- **SQL Database (Basic):** ~R$ 25/mês
-- **App Service (B1):** ~R$ 55/mês
-- **Total:** ~R$ 80/mês
-
-💡 **Dica:** Use o Azure Calculator para estimativas precisas: https://azure.microsoft.com/pricing/calculator/
+**Passos:**
+1. Clique em `DELETE /api/produtos/{id}`
+2. Clique em "Try it out"
+3. Digite o ID do produto que deseja deletar
+4. Clique em "Execute"
+5. Verifique o código de resposta `204 No Content`
 
 ---
 
-## 📚 11. Recursos Adicionais
-
-- [Documentação Azure CLI](https://docs.microsoft.com/cli/azure/)
-- [Azure App Service](https://docs.microsoft.com/azure/app-service/)
-- [Azure SQL Database](https://docs.microsoft.com/azure/azure-sql/)
-- [.NET no Azure](https://docs.microsoft.com/dotnet/azure/)
-
----
-
-## 🤝 12. Suporte
-
-Se encontrar problemas:
-1. Verifique os logs: `az webapp log tail`
-2. Consulte a documentação oficial
-3. Abra uma issue no repositório
-
----
 
 ## ✅ Checklist Final
 
