@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
@@ -15,6 +15,14 @@
         </PackageReference>
         <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.23.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="AzureCatalogAPI\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="AzureCatalogAPI\appsettings.json" />
+      <_ContentIncludedByDefault Remove="AzureCatalogAPI\obj\AzureCatalogAPI.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="AzureCatalogAPI\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="AzureCatalogAPI\Properties\launchSettings.json" />
     </ItemGroup>
 
 </Project>

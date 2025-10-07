@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ygcfQ8JMor+98d9ya5j5kf4yPIH6oPZDalUpAw8LyhA=",
+  "Source": "AzureCatalogAPI",
+  "BasePath": "_content/AzureCatalogAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
