@@ -463,24 +463,6 @@ az webapp log deployment show \
 
 ---
 
-
-## ✅ Checklist Final
-
-- [ ] Azure CLI instalado e configurado
-- [ ] .NET 9.0 SDK instalado
-- [ ] Login no Azure realizado
-- [ ] Resource Group criado
-- [ ] SQL Server criado
-- [ ] Database criado e tabelas criadas
-- [ ] Firewall configurado
-- [ ] App Service Plan criado
-- [ ] Web App criado
-- [ ] Connection String configurada
-- [ ] Aplicação deployada
-- [ ] API testada e funcionando
-
----
-
 **🎉 Parabéns! Sua API está no ar!**
 
 Acesse: `https://SEU-WEBAPP.azurewebsites.net/swagger`
