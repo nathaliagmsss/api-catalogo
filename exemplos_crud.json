@@ -1,0 +1,143 @@
+
+================================================
+CATEGORIAS - Exemplos de Requisições
+================================================
+
+
+ ===== POST - Criar Categoria =====
+--URL: POST https:seu-app.azurewebsites.net/api/categorias
+{
+  "nome": "Eletrônicos",
+  "descricao": "Produtos eletrônicos e tecnologia",
+  "ativo": true
+},
+
+ ===== GET - Listar Todas Categorias =====
+URL: GET https:seu-app.azurewebsites.net/api/categorias
+Resposta:
+[
+  {
+    "id": 1,
+    "nome": "Eletrônicos",
+    "descricao": "Produtos eletrônicos e tecnologia",
+    "ativo": true,
+    "dataCriacao": "2025-10-07T10:30:00",
+    "produtos": []
+  }
+],
+
+ ===== GET - Buscar Categoria por ID =====
+ URL: GET https:seu-app.azurewebsites.net/api/categorias/1
+ Resposta:
+{
+  "id": 1,
+  "nome": "Eletrônicos",
+  "descricao": "Produtos eletrônicos e tecnologia",
+  "ativo": true,
+  "dataCriacao": "2025-10-07T10:30:00",
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Notebook Dell",
+      "descricao": "Notebook i7 16GB RAM",
+      "preco": 3500.00,
+      "estoque": 10,
+      "categoriaId": 1,
+      "ativo": true,
+      "dataCriacao": "2025-10-07T10:35:00"
+    }
+  ]
+},
+
+ ===== PUT - Atualizar Categoria =====
+ URL: PUT https:seu-app.azurewebsites.net/api/categorias/1
+{
+  "id": 1,
+  "nome": "Eletrônicos e Tecnologia",
+  "descricao": "Produtos eletrônicos, tecnologia e gadgets",
+  "ativo": true,
+  "dataCriacao": "2025-10-07T10:30:00"
+},
+
+ ===== DELETE - Deletar Categoria =====
+ URL: DELETE https:seu-app.azurewebsites.net/api/categorias/1
+ Sem body - Retorna 204 No Content
+
+
+
+================================================
+PRODUTOS - Exemplos de Requisições
+================================================
+
+
+ ===== POST - Criar Produto =====
+ URL: POST https:seu-app.azurewebsites.net/api/produtos
+{
+  "nome": "Notebook Dell Inspiron",
+  "descricao": "Notebook Dell i7 11ª geração, 16GB RAM, SSD 512GB",
+  "preco": 3500.00,
+  "estoque": 10,
+  "categoriaId": 1,
+  "ativo": true
+}
+
+===== POST - Criar Outro Produto =====
+{
+  "nome": "Mouse Logitech MX Master",
+  "descricao": "Mouse sem fio ergonômico",
+  "preco": 350.00,
+  "estoque": 25,
+  "categoriaId": 1,
+  "ativo": true
+}
+
+-- ===== GET - Listar Todos Produtos =====
+-- URL: GET https:seu-app.azurewebsites.net/api/produtos
+-- Resposta:
+[
+  {
+    "id": 1,
+    "nome": "Notebook Dell Inspiron",
+    "descricao": "Notebook Dell i7 11ª geração, 16GB RAM, SSD 512GB",
+    "preco": 3500.00,
+    "estoque": 10,
+    "categoriaId": 1,
+    "ativo": true,
+    "dataCriacao": "2025-10-07T10:35:00",
+    "categoria": {
+      "id": 1,
+      "nome": "Eletrônicos",
+      "descricao": "Produtos eletrônicos e tecnologia",
+      "ativo": true,
+      "dataCriacao": "2025-10-07T10:30:00"
+    }
+  },
+  {
+    "id": 2,
+    "nome": "Mouse Logitech MX Master",
+    "descricao": "Mouse sem fio ergonômico",
+    "preco": 350.00,
+    "estoque": 25,
+    "categoriaId": 1,
+    "ativo": true,
+    "dataCriacao": "2025-10-07T10:36:00",
+    "categoria": {
+      "id": 1,
+      "nome": "Eletrônicos",
+      "descricao": "Produtos eletrônicos e tecnologia",
+      "ativo": true,
+      "dataCriacao": "2025-10-07T10:30:00"
+    }
+  }
+]
+
+-- ===== GET - Buscar Produto por ID =====
+-- URL: GET https:seu-app.azurewebsites.net/api/produtos/1
+-- Resposta:
+{
+  "id": 1,
+  "nome": "Notebook Dell Inspiron",
+  "descricao": "Notebook Dell i7 11ª geração, 16GB RAM, SSD 512GB",
+  "preco": 3500.00,
+  "estoque": 10,
+  "categoria
