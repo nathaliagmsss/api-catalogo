@@ -1,6 +1,6 @@
 #!/bin/bash
 RESOURCE_GROUP="rg-catalog-api"
-SQL_SERVER_NAME="sqlsrv-catalog-api1759850557" #Obtido do script anterior
+SQL_SERVER_NAME="" #Obtido do script 2
 
 echo "Configurando firewall..."
 

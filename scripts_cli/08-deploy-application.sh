@@ -1,6 +1,6 @@
 #!/bin/bash
 RESOURCE_GROUP="rg-catalog-api"
-APP_SERVICE_NAME="app-catalog-api-1759851105" #Obtido do script 05
+APP_SERVICE_NAME="" #Obtido do script 05
 
 echo "Fazendo deploy da aplicação..."
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 RESOURCE_GROUP="rg-catalog-api"
-SQL_SERVER_NAME="sqlsrv-catalog-api1759850557"  # Obtido do script 02
+SQL_SERVER_NAME=""  # Obtido do script 02
 SQL_DATABASE_NAME="catalogodb"
 
 echo "Criando SQL Database..."
