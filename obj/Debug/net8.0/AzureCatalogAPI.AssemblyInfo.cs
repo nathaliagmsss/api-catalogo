@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AzureCatalogAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dffac262519c8c59a0f606775173d62cf7b021c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f4f51c302f95b45962546d5af03b360246e792b")]
 [assembly: System.Reflection.AssemblyProductAttribute("AzureCatalogAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AzureCatalogAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
