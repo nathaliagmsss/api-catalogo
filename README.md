@@ -193,9 +193,12 @@ Agora você precisa executar o script SQL para criar as tabelas:
 ```
 Web App criada: https://app-catalog-api-1759851105.azurewebsites.net
 ```
+
 3.8. Configurar Arquivos de Configuração
 ⚠️ IMPORTANTE: Antes de fazer o deploy, você precisa configurar os arquivos appsettings.json:
 appsettings.Development.json (Desenvolvimento Local)
+
+```
 json{
   "Logging": {
     "LogLevel": {
@@ -223,13 +226,16 @@ json{
     "ConnectionString": "<SUA_CHAVE_APP_INSIGHTS>"
   }
 }
+```
 📝 Valores a substituir no appsettings.json:
 
+```
 <SEU_SERVIDOR>: Ex: sqlsrv-catalog-api1759850557.database.windows.net
 <SEU_BANCO>: catalogodb
 <USUARIO>: fiapAdmin
 <SENHA>: FiapAmin2025!
 <SUA_CHAVE_APP_INSIGHTS>
+```
 
 🔒 Segurança:
 
