@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "O6btfHm/A+0=",
+  "success": true,
+  "projectFilePath": "/Users/nathaliagomesdasilva/Desktop/Programacao/2025segundo semestre/devops/AzureCatalogAPI/AzureCatalogAPI/AzureCatalogAPI.csproj",
+  "expectedPackageFiles": [
+    "/Users/nathaliagomesdasilva/.nuget/packages/microsoft.aspnetcore.openapi/9.0.1/microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "/Users/nathaliagomesdasilva/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
